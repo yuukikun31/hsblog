@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>blog_01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <style>
+    atom-text-editor {
+  color: #839496;
+  background-color: #002b36;
+}.markdown-preview-enhanced pre .gutter {
+  color: #839496;
+  background-color: #073642;
+}.markdown-preview-enhanced pre .gutter .line-number.cursor-line {
+  background-color: #084150;
+}.markdown-preview-enhanced pre .invisible-character {
+  color: #0a4d5e;
+}.markdown-preview-enhanced pre .indent-guide {
+  color: #0a4d5e;
+}.markdown-preview-enhanced pre .cursor {
+  border-color: #fdf6e3;
+}.markdown-preview-enhanced pre .selection .region {
+  background-color: #073a47;
+}.markdown-preview-enhanced pre .fold-marker:after,.markdown-preview-enhanced pre .gutter .line-number.folded {
+  color: #d33682;
+}.markdown-preview-enhanced pre .bracket-matcher .region {
+  border-color: #d33682;
+}
+.mpe-syntax--comment {
+  color: #586e75;
+  font-style: italic;
+}
+.mpe-syntax--comment .mpe-syntax--markup.mpe-syntax--link {
+  color: #586e75;
+}
+.mpe-syntax--string {
+  color: #2aa198;
+}
+.mpe-syntax--string.mpe-syntax--regexp {
+  color: #dc322f;
+}
+.mpe-syntax--constant.mpe-syntax--numeric {
+  color: #d33682;
+}
+.mpe-syntax--constant.mpe-syntax--language {
+  color: #b58900;
+}
+.mpe-syntax--constant.mpe-syntax--character,
+.mpe-syntax--constant.mpe-syntax--other {
+  color: #cb4b16;
+}
+.mpe-syntax--variable {
+  color: #268bd2;
+}
+.mpe-syntax--keyword {
+  color: #859900;
+}
+.mpe-syntax--storage {
+  color: #859900;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class,
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type,
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
+  color: #268bd2;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
+  color: #657b83;
+}
+.mpe-syntax--support.mpe-syntax--function {
+  color: #268bd2;
+}
+.mpe-syntax--support.mpe-syntax--function.mpe-syntax--builtin {
+  color: #859900;
+}
+.mpe-syntax--support.mpe-syntax--type,
+.mpe-syntax--support.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--tag.mpe-syntax--entity.mpe-syntax--name {
+  color: #268bd2;
+}
+.mpe-syntax--tag.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--html,
+.mpe-syntax--tag.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--begin,
+.mpe-syntax--tag.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--end {
+  color: #586e75;
+}
+.mpe-syntax--invalid.mpe-syntax--deprecated {
+  color: #b58900;
+  text-decoration: underline;
+}
+.mpe-syntax--invalid.mpe-syntax--illegal {
+  color: #dc322f;
+  text-decoration: underline;
+}
+.mpe-syntax--none {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--meta.mpe-syntax--preprocessor,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--meta.mpe-syntax--preprocessor {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--directive,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--directive {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--punctuation.mpe-syntax--string,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--punctuation.mpe-syntax--string {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--constant,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--constant {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--constant.mpe-syntax--numeric,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--constant.mpe-syntax--numeric,
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--constant.mpe-syntax--language.mpe-syntax--c,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--constant.mpe-syntax--language.mpe-syntax--c {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--storage,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--storage {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--entity,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--entity {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function.mpe-syntax--preprocessor,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function.mpe-syntax--preprocessor {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--support.mpe-syntax--type,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--support.mpe-syntax--type {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--support.mpe-syntax--type.mpe-syntax--posix-reserved,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--support.mpe-syntax--type.mpe-syntax--posix-reserved {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--dot-access,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--dot-access {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--preprocessor,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--preprocessor {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--support.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--variable,
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function,
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--readwrite {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--function {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--entity.mpe-syntax--name {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--round,
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--meta.mpe-syntax--delimiter {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--punctuation.mpe-syntax--terminator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--embedded.mpe-syntax--source {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #d33682;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--constant.mpe-syntax--language.mpe-syntax--boolean {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--separator,
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--terminator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--property-list.mpe-syntax--begin,
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--property-list.mpe-syntax--end {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--function {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--name {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--attribute-name.mpe-syntax--class,
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--id {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--pseudo-element,
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--pseudo-class {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--property-value {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--numeric .mpe-syntax--unit {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--rgb-value {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant.mpe-syntax--media {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--keyword.mpe-syntax--important {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--less .mpe-syntax--keyword.mpe-syntax--unit,
+.mpe-syntax--source.mpe-syntax--scss .mpe-syntax--keyword.mpe-syntax--unit {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--go .mpe-syntax--operator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--go .mpe-syntax--operator.mpe-syntax--assignment {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--keyword.mpe-syntax--operator {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--keyword.mpe-syntax--import {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--storage.mpe-syntax--modifier.mpe-syntax--import {
+  color: #586e75;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--class .mpe-syntax--storage.mpe-syntax--modifier {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--class .mpe-syntax--meta.mpe-syntax--class.mpe-syntax--identifier .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--primitive.mpe-syntax--array {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #d33682;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--constant.mpe-syntax--other {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--storage.mpe-syntax--type {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--method-call {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--method-call .mpe-syntax--meta.mpe-syntax--method {
+  color: #6c71c4;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--method-call .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--seperator.mpe-syntax--parameter {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--method-parameters {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--constant {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--comma {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--support.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--meta.mpe-syntax--brace {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--keyword {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--new {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--keyword.mpe-syntax--control {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--regexp {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--variable {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--parameter {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--regexp {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--support.mpe-syntax--function {
+  color: #6c71c4;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--support.mpe-syntax--constant {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--punctuation.mpe-syntax--terminator.mpe-syntax--statement {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--meta.mpe-syntax--delimiter.mpe-syntax--method.mpe-syntax--period {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--curly {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--template .mpe-syntax--embedded.mpe-syntax--source {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--template .mpe-syntax--embedded.mpe-syntax--source > .mpe-syntax--embedded.mpe-syntax--punctuation {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--js.mpe-syntax--embedded .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--js.mpe-syntax--jsx .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
+  color: #268bd2;
+}
+.mpe-syntax--gfm .mpe-syntax--link .mpe-syntax--entity {
+  color: #6c71c4;
+}
+.mpe-syntax--gfm .mpe-syntax--list.mpe-syntax--ordered {
+  color: #859900;
+}
+.mpe-syntax--gfm .mpe-syntax--list.mpe-syntax--unordered {
+  color: #b58900;
+}
+.mpe-syntax--gfm .mpe-syntax--raw {
+  font-style: italic;
+}
+.mpe-syntax--gfm.mpe-syntax--support {
+  color: #586e75;
+}
+.mpe-syntax--gfm.mpe-syntax--support.mpe-syntax--quote {
+  color: #6c71c4;
+}
+.mpe-syntax--markup.mpe-syntax--bold {
+  font-weight: bold;
+}
+.mpe-syntax--markup.mpe-syntax--italic {
+  font-style: italic;
+}
+.mpe-syntax--markup.mpe-syntax--heading {
+  color: #268bd2;
+}
+.mpe-syntax--markup.mpe-syntax--link {
+  color: #2aa198;
+}
+.mpe-syntax--markup.mpe-syntax--deleted {
+  color: #dc322f;
+}
+.mpe-syntax--markup.mpe-syntax--changed {
+  color: #b58900;
+}
+.mpe-syntax--markup.mpe-syntax--inserted {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--class {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--function {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--storage.mpe-syntax--modifier {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--entity.mpe-syntax--other {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--variable {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
+  color: #586e75;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--support.mpe-syntax--function.mpe-syntax--construct {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--support.mpe-syntax--function.mpe-syntax--array {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--class {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--assignment {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--other {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--entity {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--entity.mpe-syntax--name {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--entity.mpe-syntax--other {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--function {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--function.mpe-syntax--magic {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--punctuation.mpe-syntax--string {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--quantifier {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--logical {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--import {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--other {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--constant.mpe-syntax--language {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--constant.mpe-syntax--character {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--constant.mpe-syntax--other {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--variable {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--support.mpe-syntax--function.mpe-syntax--builtin {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--support.mpe-syntax--type.mpe-syntax--exception.mpe-syntax--python {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--support.mpe-syntax--type.mpe-syntax--python {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--string {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--class.mpe-syntax--todo {
+  color: #d33682;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--function {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--function.mpe-syntax--begin {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--parameters {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--meta.mpe-syntax--embedded .mpe-syntax--punctuation.mpe-syntax--section {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
+  color: #586e75;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--entity.mpe-syntax--inherited-class {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--parameter {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--constant {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--constant.mpe-syntax--boolean {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--instance .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--class {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--class.mpe-syntax--control {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--module {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--require .mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--keyword.mpe-syntax--other {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--keyword.mpe-syntax--control {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--keyword.mpe-syntax--operator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--special-method {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--symbol {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--symbol .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--hashkey {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--hashkey .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--regexp {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--todo {
+  color: #d33682;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--ruby.mpe-syntax--global {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--ruby.mpe-syntax--global .mpe-syntax--punctuation {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--block {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--self {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--separator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--numeric {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--regexp {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated .mpe-syntax--embedded.mpe-syntax--line.mpe-syntax--ruby .mpe-syntax--punctuation .mpe-syntax--source.mpe-syntax--ruby {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated .mpe-syntax--embedded.mpe-syntax--line.mpe-syntax--ruby .mpe-syntax--source.mpe-syntax--ruby {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated .mpe-syntax--embedded.mpe-syntax--line.mpe-syntax--ruby .mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--array,
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated .mpe-syntax--embedded.mpe-syntax--line.mpe-syntax--ruby .mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--function {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--support.mpe-syntax--function {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--support.mpe-syntax--function.mpe-syntax--kernel {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--variable {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--declaration {
+  color: #93a1a1;
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--comparison {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--class,
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--type {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--val {
+  font-weight: normal;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--variable {
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--variable.mpe-syntax--parameter {
+  color: #6c71c4;
+  font-weight: normal;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--control.mpe-syntax--flow {
+  color: #93a1a1;
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--constant.mpe-syntax--language {
+  color: #93a1a1;
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--function.mpe-syntax--declaration {
+  color: #6c71c4;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--modifier.mpe-syntax--other {
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--package {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--variable.mpe-syntax--import {
+  font-weight: normal;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--type .mpe-syntax--bounds,
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--type .mpe-syntax--class {
+  color: #6c71c4;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--documentation :not(.mpe-syntax--embedded).mpe-syntax--link.mpe-syntax--entity {
+  color: #268bd2;
+  text-decoration: underline;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--documentation :not(.mpe-syntax--embedded) .mpe-syntax--class,
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--documentation :not(.mpe-syntax--embedded) .mpe-syntax--parameter {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--documentation :not(.mpe-syntax--embedded) .mpe-syntax--description {
+  color: #586e75;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--embedded {
+  color: #6c7c7c;
+  font-style: italic;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--embedded .mpe-syntax--margin,
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--embedded .mpe-syntax--delimiters {
+  font-style: normal;
+}
+.scrollbar-style::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar-style::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.scrollbar-style::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0.66);
+  border: 4px solid rgba(150, 150, 150, 0.66);
+  background-clip: content-box;
+}
+.markdown-preview-enhanced-container .mpe-toolbar {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  opacity: 0;
+  display: block;
+}
+.markdown-preview-enhanced-container .mpe-toolbar .back-to-top-btn,
+.markdown-preview-enhanced-container .mpe-toolbar .refresh-btn,
+.markdown-preview-enhanced-container .mpe-toolbar .sidebar-toc-btn {
+  float: right;
+  width: 32px;
+  margin-right: 4px;
+  opacity: 0.4;
+}
+.markdown-preview-enhanced-container .mpe-toolbar .back-to-top-btn:hover,
+.markdown-preview-enhanced-container .mpe-toolbar .refresh-btn:hover,
+.markdown-preview-enhanced-container .mpe-toolbar .sidebar-toc-btn:hover {
+  opacity: 1.0;
+}
+.markdown-preview-enhanced-container:hover .back-to-top-btn,
+.markdown-preview-enhanced-container:hover .refresh-btn,
+.markdown-preview-enhanced-container:hover .sidebar-toc-btn {
+  display: block;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 268px;
+  height: 100%;
+  padding: 32px 0 12px 0;
+  overflow: auto;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  box-shadow: -4px 0px 12px rgba(150, 150, 150, 0.33);
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc a {
+  color: #333;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc ul {
+  padding: 0 1.6em;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc li {
+  margin-bottom: 0.8em;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc ul {
+  list-style-type: none;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-toolbar {
+  right: 300px;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .markdown-preview-enhanced {
+  width: calc(100% - 268px);
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar {
+  width: 8px;
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar-track,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar-thumb,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0.66);
+  border: 4px solid rgba(150, 150, 150, 0.66);
+  background-clip: content-box;
+}
+.markdown-preview-enhanced {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  overflow: initial;
+  margin: 10px 13px 10px 13px;
+  padding: 2em;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[for="preview"] {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5,
+.markdown-preview-enhanced h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  color: #000000;
+}
+.markdown-preview-enhanced h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.markdown-preview-enhanced h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h6 {
+  font-size: 1.0em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5 {
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1em;
+}
+.markdown-preview-enhanced h6 {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2 {
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced strong {
+  color: #000000;
+}
+.markdown-preview-enhanced del {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a {
+  color: #08c;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a:hover {
+  color: #0050a3;
+  text-decoration: none;
+}
+.markdown-preview-enhanced img,
+.markdown-preview-enhanced svg {
+  max-width: 100%;
+}
+.markdown-preview-enhanced > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > ul,
+.markdown-preview-enhanced > ol {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol {
+  padding-left: 2em;
+}
+.markdown-preview-enhanced ul.no-list,
+.markdown-preview-enhanced ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-preview-enhanced ul ul,
+.markdown-preview-enhanced ul ol,
+.markdown-preview-enhanced ol ol,
+.markdown-preview-enhanced ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li.task-list-item {
+  list-style: none;
+}
+.markdown-preview-enhanced li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-preview-enhanced .task-list-item-checkbox:hover {
+  cursor: pointer;
+}
+.markdown-preview-enhanced blockquote {
+  margin: 16px 0;
+  font-size: inherit;
+  padding: 0 15px;
+  color: #5c5c5c;
+  border-left: 4px solid #d6d6d6;
+}
+.markdown-preview-enhanced blockquote > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced blockquote > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced hr {
+  height: 4px;
+  margin: 32px 0;
+  background-color: #d6d6d6;
+  border: 0 none;
+}
+.markdown-preview-enhanced table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-preview-enhanced table th {
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-preview-enhanced table td,
+.markdown-preview-enhanced table th {
+  border: 1px solid #d6d6d6;
+  padding: 6px 13px;
+}
+.markdown-preview-enhanced dl {
+  padding: 0;
+}
+.markdown-preview-enhanced dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview-enhanced dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: #000000;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+.markdown-preview-enhanced code::before,
+.markdown-preview-enhanced code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview-enhanced pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em !important;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced .highlight {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced .highlight pre,
+.markdown-preview-enhanced pre {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 16px;
+  overflow: auto;
+  font-size: 0.85em !important;
+  line-height: 1.45;
+  color: #839496;
+  background-color: #003b4a !important;
+  border: #d6d6d6;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-preview-enhanced pre {
+  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-all;
+}
+.markdown-preview-enhanced pre .section {
+  opacity: 1;
+}
+.markdown-preview-enhanced pre code,
+.markdown-preview-enhanced pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced pre code:before,
+.markdown-preview-enhanced pre tt:before,
+.markdown-preview-enhanced pre code:after,
+.markdown-preview-enhanced pre tt:after {
+  content: normal;
+}
+.markdown-preview-enhanced p,
+.markdown-preview-enhanced blockquote,
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol,
+.markdown-preview-enhanced dl,
+.markdown-preview-enhanced pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo {
+  counter-reset: lineNo;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo .line::before {
+  display: inline-block;
+  counter-increment: lineNo;
+  content: counter(lineNo);
+  text-align: right;
+  padding: 0;
+  margin-left: -1em;
+  margin-right: 1.5em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-100 .line::before {
+  width: 2em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-1000 .line::before {
+  width: 2.5em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-10000 .line::before {
+  width: 3em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-100000 .line::before {
+  width: 3.5em;
+}
+.markdown-preview-enhanced kbd {
+  color: #000000;
+  border: 1px solid #d6d6d6;
+  border-bottom: 2px solid #c7c7c7;
+  padding: 2px 4px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .pagebreak,
+.markdown-preview-enhanced .newpage {
+  page-break-before: always;
+}
+@media screen and (min-width: 914px) {
+  .markdown-preview-enhanced {
+    width: 980px;
+    margin: 10px auto;
+    background: #fff;
+  }
+}
+@media screen and (max-width: 400px) {
+  .markdown-preview-enhanced {
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+}
+@media print {
+  .markdown-preview-enhanced {
+    background-color: #fff;
+    /*table,*/
+  }
+  .markdown-preview-enhanced h1,
+  .markdown-preview-enhanced h2,
+  .markdown-preview-enhanced h3,
+  .markdown-preview-enhanced h4,
+  .markdown-preview-enhanced h5,
+  .markdown-preview-enhanced h6 {
+    color: #000000;
+    page-break-after: avoid;
+  }
+  .markdown-preview-enhanced blockquote {
+    color: #5c5c5c;
+  }
+  .markdown-preview-enhanced pre {
+    page-break-inside: avoid;
+  }
+  .markdown-preview-enhanced table {
+    display: table;
+  }
+  .markdown-preview-enhanced img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .markdown-preview-enhanced pre,
+  .markdown-preview-enhanced code {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk {
+  position: relative;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .output-div {
+  overflow-x: auto;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .output-div svg {
+  display: block;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk pre {
+  cursor: text;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-btn,
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-all-btn {
+  float: right;
+  margin-left: 4px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: #eee;
+  background-color: #528bff;
+  background-image: none;
+  border: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-btn:hover,
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-all-btn:hover {
+  background-color: #4b7fe8;
+  cursor: pointer;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk:hover .btn-group {
+  display: block;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.85em;
+  color: inherit;
+  padding: 2px 6px;
+  background-color: rgba(0, 0, 0, 0.04);
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk.running .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk.running .status {
+  display: block;
+}
+.markdown-preview-enhanced:not([for="preview"]) .code-chunk .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced:not([for="preview"]) .code-chunk .status {
+  display: none;
+}
+/*
+ * Reveal.js styles
+ */
+[data-presentation-preview-mode] {
+  background-color: #f4f4f4;
+}
+[data-presentation-preview-mode] .preview-slides {
+  width: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide {
+  position: relative;
+  background-color: #fff;
+  padding: 2em !important;
+  margin-bottom: 12px;
+  text-align: left !important;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 0px 16px 4px #eeeeee;
+  font-size: 24px;
+}
+[data-presentation-preview-mode] .preview-slides .slide h1,
+[data-presentation-preview-mode] .preview-slides .slide h2,
+[data-presentation-preview-mode] .preview-slides .slide h3,
+[data-presentation-preview-mode] .preview-slides .slide h4,
+[data-presentation-preview-mode] .preview-slides .slide h5,
+[data-presentation-preview-mode] .preview-slides .slide h6 {
+  margin-top: 0;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe,
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+  z-index: 1;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  z-index: 2;
+}
+[data-presentation-preview-mode] section {
+  display: block;
+  width: 100%;
+  transform-style: preserve-3d;
+  font-size: 100%;
+  font: inherit;
+}
+.markdown-preview-enhanced[data-presentation-mode] {
+  font-size: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] h1,
+.markdown-preview-enhanced[data-presentation-mode] h2,
+.markdown-preview-enhanced[data-presentation-mode] h3,
+.markdown-preview-enhanced[data-presentation-mode] h4,
+.markdown-preview-enhanced[data-presentation-mode] h5,
+.markdown-preview-enhanced[data-presentation-mode] h6 {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] strong {
+  font-weight: bold;
+}
+.markdown-preview-enhanced[data-presentation-mode]::-webkit-scrollbar {
+  display: none;
+}
+.markdown-preview-enhanced .slides {
+  text-align: left !important;
+}
+
+    /*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+atom-text-editor {
+  color: white;
+  background-color: #172626;
+}
+/*
+ * markdown-preview-enhanced custom style
+ */
+.markdown-preview-enhanced.markdown-preview-enhanced {
+  font-family: "ShinGoPro-Light", sans-serif;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h1 {
+  counter-reset: h2counter;
+  color: #FF6860;
+  position: relative;
+  padding: 0.3em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h1::after {
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  content: '';
+  height: 5px;
+  background: repeating-linear-gradient(-45deg, #FF6860, #FF6860 3px, #FFF 3px, #FFF 6px);
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h2 {
+  background-color: #F5F5F5;
+  border-left: 5px solid #16A6B6;
+  padding: 0.4em;
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+  color: #555;
+  margin-top: 1.5em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h3 {
+  counter-increment: h3counter;
+  counter-reset: h4counter;
+  position: relative;
+  padding: .75em 1em .75em 1em;
+  color: #16A6B6;
+  font-size: 20px;
+  margin-top: 1.4em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h3::after {
+  position: absolute;
+  top: .5em;
+  left: .0em;
+  content: '';
+  width: 6px;
+  height: -webkit-calc(64%);
+  height: calc(64%);
+  background-color: #16A6B6;
+  border-radius: 4px;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h4 {
+  counter-increment: h4counter;
+  font-size: 16px;
+  border: 3px solid #ccc;
+  margin-top: 1em;
+  color: #555;
+  padding: .25em 0em .25em 1em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h2:before {
+  content: counter(h2counter) ". ";
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h3:before {
+  content: counter(h2counter) ". " counter(h3counter) ". ";
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h4:before {
+  content: counter(h2counter) ". " counter(h3counter) ". " counter(h4counter) ". ";
+}
+.markdown-preview-enhanced.markdown-preview-enhanced img {
+  width: 40%;
+  margin: 0px 0px 30px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border: 2px solid #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 4px 4px 4px #111;
+  box-shadow: 4px 4px 4px #111;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced em {
+  color: #FF6860;
+  font-weight: bold;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced p {
+  line-height: 1.8em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced ol > li {
+  margin-top: 1em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced strong {
+  color: #FF6860;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced hr {
+  color: #FFF;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h2:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h2:before {
+  content: "" !important;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h3:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h3:before {
+  content: "" !important;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h4:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h4:before {
+  content: "" !important;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h5:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h5:before {
+  content: "" !important;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h6:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h6:before {
+  content: "" !important;
+}
+
+    </style>
+
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({"extensions":["tex2jax.js"],"jax":["input/TeX","output/HTML-CSS"],"messageStyle":"none","tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]],"processEnvironments":false,"processEscapes":true},"TeX":{"extensions":["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]},"HTML-CSS":{"availableFonts":["TeX"]}}); </script> <script type="text/javascript" async src="file:///Users/yonekurayuuki/.atom/packages/markdown-preview-enhanced/dependencies/mathjax/MathJax.js"></script>
+
+    
+  </head>
+  <body class="markdown-preview-enhanced   ">
+
+  <h1 id="&#x6A5F;&#x68B0;&#x5B66;&#x7FD2;-&#x3053;&#x3068;&#x306F;&#x3058;&#x3081;">機械学習 ことはじめ</h1>
+<h2 id="&#x7FFB;&#x8A33;&#x696D;&#x754C;&#x3068;&#x6A5F;&#x68B0;&#x5B66;&#x7FD2;">翻訳業界と機械学習</h2>
+<p>2015年にGoogle(正確にはDeepmind社製)の<strong>AlphaGo</strong>がプロ棋士をハンディなしで打ち破ったことにより、耳目を集めた機械学習分野。今や猫も杓子も、自動車産業もIT関連企業も官公庁も、血道を上げて機械学習のビジネス分野への実用化を目指し、日夜研究に勤しんでいる。</p>
+<div class="figure">
+<img src="https://gogameguru.com/i/2016/03/AlphaGo-Lee-Sedol-game-3-game-over.jpg">
+
+</div>
+<p>一説によると、2030年までのAIビジネスの市場規模は80兆とも90兆とも言われているが、こうした時代の大きな変換点の只中にいて、私たちドキュメント・翻訳関連企業はこれまで同様何ら関わりを持たずにいられるであろうか。</p>
+<p>Google翻訳がディープラーニングを導入したことで格段に翻訳精度が上がったように、今後も翻訳分野の技術革新は進むだろうし、その分従来の人の手による翻訳が占める割合は縮小していくだろう。正直に言うと、翻訳業を生業とする弊社のような企業にとっては、あまり歓迎したくない事態ではある。<br>
+それでは、木槌を携えて織物機を破壊して回ったラッダイト運動よろしく、我々の手から労働を奪い取る憎きパソコンを破壊して回れば、我々にとってより良い未来が築けるであろうか。トラドスもTMもない時代のように、紙とペンでもて、産業翻訳者がかつての地位を奪回するのである。</p>
+<div class="figure">
+<img src="http://jdennehy.com/wp-content/uploads/2013/12/luddites1.jpg">
+
+</div>
+<p>我ながらこれはこれでなかなか良い思い付きと思わないでもないが、恐らくこれでは二つの理由で事態の好転は望めない。<br>
+一つは、機械学習の仕組みはパソコンの中に潜む幽霊のようなものではなく、それ自体が独立して存在しているアルゴリズムであると言うことだ。つまり、パソコンを破壊しても一度生まれたアルゴリズムを打倒することは叶わない。<br>
+もう一つは、文明とは本質的に後退することを許さないと言う点である。前時代への後退ができぬ以上、現代に翻訳業を生業として生きる我々にとって機械学習は避けては通れぬ道なのであろう。<br>
+本ブログは、木槌の代わりに数ⅢCの教科書片手に、機械学習という名の巨像に挑む、文系出身のド素人による無謀なる闘いの記録である。</p>
+<div class="figure">
+<img src="http://blog.onekoreanews.net/attach/5/1268067651.jpg">
+
+</div>
+<h2 id="&#x672C;&#x30D6;&#x30ED;&#x30B0;&#x306E;&#x4E88;&#x5B9A;">本ブログの予定</h2>
+<p>本ブログは、不定期に下記を主題にして進めたい。</p>
+<ul>
+<li>パーセプトロン</li>
+<li>ADALINE</li>
+<li>ロジスティック回帰</li>
+<li>サポートベクターマシン</li>
+<li>カーネルSVN</li>
+<li>決定木学習</li>
+<li>k近傍法</li>
+</ul>
+<p>もちろん筆者の理解の進みに応じて、内容の深度と更新頻度が大きく変わることをここに断っておきたい。<br>
+また、既に専門的な知識をお持ちの読者は、早々にブラウザの閉じるボタンを押して、オライリー本でも紐解いていただくことをお勧めする。</p>
+<h2 id="&#x672C;&#x30D6;&#x30ED;&#x30B0;&#x3092;&#x59CB;&#x3081;&#x308B;&#x306B;&#x3042;&#x305F;&#x3063;&#x3066;">本ブログを始めるにあたって</h2>
+<h3 id="&#x53C2;&#x8003;&#x56F3;&#x66F8;">参考図書</h3>
+<p><strong>Tensorflow</strong>にしろ、<strong>Chainer</strong>にしろ、強力な機械学習系ライブラリが世の中には数多く出ているので、手っ取り早く機械学習を実践したい方はそちらをお使いいただきたい。<br>
+本ブログは、ズブの素人が機械学習系のアルゴリズムをあれこれ悩みながら学んでいくところに面白みを感じていただきたいと考えている。もし誤った解釈があれば是非コメントいただけると幸いである。</p>
+<div class="figure">
+<img src="https://c1.staticflickr.com/1/523/19975744438_628b3c7c05_b.jpg">
+
+</div>
+<p>なお、本ブログは基本的にインプレス発行の<strong>『Python機械学習プログラミング 達人データサイエンティストによる理論と実践』</strong>を参考書として進める。</p>
+<h3 id="&#x4F7F;&#x7528;&#x3059;&#x308B;&#x74B0;&#x5883;&#x306B;&#x3064;&#x3044;&#x3066;">使用する環境について</h3>
+<p>環境については、下記を使用する予定だ。</p>
+<ul>
+<li>Mac OS 10.12.5</li>
+<li>Python 3.6</li>
+<li>NumPy 1.9.1</li>
+<li>SciPy 0.14.0</li>
+<li>scikit-learn 0.15.2</li>
+<li>matplotlib 1.4.0</li>
+<li>pandas 0.15.2</li>
+</ul>
+<h3 id="&#x4F7F;&#x7528;&#x3059;&#x308B;&#x74B0;&#x5883;&#x306B;&#x3064;&#x3044;&#x3066;-1">使用する環境について</h3>
+<h4 id="pyenv&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">pyenvのインストール</h4>
+<p>Python2を使うことが多いので、念のため<strong>pyenv</strong>で機械学習用の仮想環境を作った。</p>
+<ol style="list-style-type: decimal">
+<li><p>pyenvをgitからクローンしてくる。</p>
+<pre class="editor-colors lang-undefined"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain mpe-syntax--null-grammar"><span>$&nbsp;git&nbsp;clone&nbsp;git://github.com/yyuu/pyenv.git&nbsp;~/.pyenv</span></span></div></pre></li>
+<li><p>パスを通す。</p>
+<pre class="editor-colors lang-undefined"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain mpe-syntax--null-grammar"><span>$&nbsp;echo&nbsp;&#39;export&nbsp;PYENV_ROOT=&quot;$HOME/.pyenv&quot;&#39;&nbsp;&gt;&gt;&nbsp;~/.bash_profile&nbsp;&nbsp;&nbsp;</span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain mpe-syntax--null-grammar"><span>$&nbsp;echo&nbsp;&#39;export&nbsp;PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;&#39;&nbsp;&gt;&gt;&nbsp;~/.bash_profile&nbsp;&nbsp;</span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain mpe-syntax--null-grammar"><span>$&nbsp;echo&nbsp;&#39;eval&nbsp;&quot;$(pyenv&nbsp;init&nbsp;-)&quot;&#39;&nbsp;&gt;&gt;&nbsp;~/.bash_profile</span></span></div></pre></li>
+<li><p>ターミナルを起動して、<code>pyenv version</code>コマンドを入力する。<br>
+バージョンが表示されたらインストールはOK。</p></li>
+<li><code>pyenv install 3.6.1</code>でpython3.6.1をpyenvにインストールする。</li>
+<li><p><code>cd</code>で、機械学習を行いたいフォルダに行き、<code>pyenv local 3.6.1</code>を入力する。</p></li>
+</ol>
+<p>以上で、<strong>pyenv</strong>でのpython3.6の環境が構築できた。</p>
+<h4 id="&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x985E;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">パッケージ類のインストール</h4>
+<p>必要なパッケージのみをインストールしたかったため、Anaconda/Minicondaは使用しない。<code>pip</code>コマンドで、一つひとつ手入力した。</p>
+<pre class="editor-colors lang-undefined"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain mpe-syntax--null-grammar"><span>$&nbsp;pip&nbsp;install&nbsp;numpy</span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain mpe-syntax--null-grammar"><span>$&nbsp;pip&nbsp;install&nbsp;scipy</span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain mpe-syntax--null-grammar"><span>$&nbsp;pip&nbsp;install&nbsp;scikit-learn</span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain mpe-syntax--null-grammar"><span>$&nbsp;pip&nbsp;install&nbsp;matplotlib</span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain mpe-syntax--null-grammar"><span>$&nbsp;pip&nbsp;install&nbsp;pandas</span></span></div></pre>
+<p>これで一通り環境が出来上がったため、次回はニューラルネットワークの基礎として<strong>パーセプトロン</strong>のコード化の方法について学習したい。</p>
+
+
+  </body>
+  
+</html>
