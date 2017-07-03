@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <style>
+    atom-text-editor {
+  color: #839496;
+  background-color: #002b36;
+}.markdown-preview-enhanced pre .gutter {
+  color: #839496;
+  background-color: #073642;
+}.markdown-preview-enhanced pre .gutter .line-number.cursor-line {
+  background-color: #084150;
+}.markdown-preview-enhanced pre .invisible-character {
+  color: #0a4d5e;
+}.markdown-preview-enhanced pre .indent-guide {
+  color: #0a4d5e;
+}.markdown-preview-enhanced pre .cursor {
+  border-color: #fdf6e3;
+}.markdown-preview-enhanced pre .selection .region {
+  background-color: #073a47;
+}.markdown-preview-enhanced pre .fold-marker:after,.markdown-preview-enhanced pre .gutter .line-number.folded {
+  color: #d33682;
+}.markdown-preview-enhanced pre .bracket-matcher .region {
+  border-color: #d33682;
+}
+.mpe-syntax--comment {
+  color: #586e75;
+  font-style: italic;
+}
+.mpe-syntax--comment .mpe-syntax--markup.mpe-syntax--link {
+  color: #586e75;
+}
+.mpe-syntax--string {
+  color: #2aa198;
+}
+.mpe-syntax--string.mpe-syntax--regexp {
+  color: #dc322f;
+}
+.mpe-syntax--constant.mpe-syntax--numeric {
+  color: #d33682;
+}
+.mpe-syntax--constant.mpe-syntax--language {
+  color: #b58900;
+}
+.mpe-syntax--constant.mpe-syntax--character,
+.mpe-syntax--constant.mpe-syntax--other {
+  color: #cb4b16;
+}
+.mpe-syntax--variable {
+  color: #268bd2;
+}
+.mpe-syntax--keyword {
+  color: #859900;
+}
+.mpe-syntax--storage {
+  color: #859900;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class,
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type,
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
+  color: #268bd2;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
+  color: #657b83;
+}
+.mpe-syntax--support.mpe-syntax--function {
+  color: #268bd2;
+}
+.mpe-syntax--support.mpe-syntax--function.mpe-syntax--builtin {
+  color: #859900;
+}
+.mpe-syntax--support.mpe-syntax--type,
+.mpe-syntax--support.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--tag.mpe-syntax--entity.mpe-syntax--name {
+  color: #268bd2;
+}
+.mpe-syntax--tag.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--html,
+.mpe-syntax--tag.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--begin,
+.mpe-syntax--tag.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--end {
+  color: #586e75;
+}
+.mpe-syntax--invalid.mpe-syntax--deprecated {
+  color: #b58900;
+  text-decoration: underline;
+}
+.mpe-syntax--invalid.mpe-syntax--illegal {
+  color: #dc322f;
+  text-decoration: underline;
+}
+.mpe-syntax--none {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--meta.mpe-syntax--preprocessor,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--meta.mpe-syntax--preprocessor {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--directive,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--directive {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--punctuation.mpe-syntax--string,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--punctuation.mpe-syntax--string {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--constant,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--constant {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--constant.mpe-syntax--numeric,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--constant.mpe-syntax--numeric,
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--constant.mpe-syntax--language.mpe-syntax--c,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--constant.mpe-syntax--language.mpe-syntax--c {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--storage,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--storage {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--entity,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--entity {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function.mpe-syntax--preprocessor,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function.mpe-syntax--preprocessor {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--support.mpe-syntax--type,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--support.mpe-syntax--type {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--support.mpe-syntax--type.mpe-syntax--posix-reserved,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--support.mpe-syntax--type.mpe-syntax--posix-reserved {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--dot-access,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--dot-access {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--c .mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--preprocessor,
+.mpe-syntax--source.mpe-syntax--cpp .mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--preprocessor {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--support.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--variable,
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function,
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--readwrite {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--function {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--entity.mpe-syntax--name {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--round,
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--meta.mpe-syntax--delimiter {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--punctuation.mpe-syntax--terminator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--embedded.mpe-syntax--source {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #d33682;
+}
+.mpe-syntax--source.mpe-syntax--coffee .mpe-syntax--constant.mpe-syntax--language.mpe-syntax--boolean {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--separator,
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--terminator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--property-list.mpe-syntax--begin,
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--property-list.mpe-syntax--end {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--function {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--name {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--attribute-name.mpe-syntax--class,
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--id {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--pseudo-element,
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--pseudo-class {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--property-value {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--numeric .mpe-syntax--unit {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--rgb-value {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant.mpe-syntax--media {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--css .mpe-syntax--keyword.mpe-syntax--important {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--less .mpe-syntax--keyword.mpe-syntax--unit,
+.mpe-syntax--source.mpe-syntax--scss .mpe-syntax--keyword.mpe-syntax--unit {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--go .mpe-syntax--operator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--go .mpe-syntax--operator.mpe-syntax--assignment {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--keyword.mpe-syntax--operator {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--keyword.mpe-syntax--import {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--storage.mpe-syntax--modifier.mpe-syntax--import {
+  color: #586e75;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--class .mpe-syntax--storage.mpe-syntax--modifier {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--class .mpe-syntax--meta.mpe-syntax--class.mpe-syntax--identifier .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--primitive.mpe-syntax--array {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #d33682;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--constant.mpe-syntax--other {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--storage.mpe-syntax--type {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--method-call {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--method-call .mpe-syntax--meta.mpe-syntax--method {
+  color: #6c71c4;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--meta.mpe-syntax--method-call .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--seperator.mpe-syntax--parameter {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--java .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--method-parameters {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--constant {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--comma {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--support.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--meta.mpe-syntax--brace {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--keyword {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--new {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--keyword.mpe-syntax--control {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--regexp {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--variable {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--parameter {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--regexp {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--support.mpe-syntax--function {
+  color: #6c71c4;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--support.mpe-syntax--constant {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--punctuation.mpe-syntax--terminator.mpe-syntax--statement {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--meta.mpe-syntax--delimiter.mpe-syntax--method.mpe-syntax--period {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--curly {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--template .mpe-syntax--embedded.mpe-syntax--source {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--js .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--template .mpe-syntax--embedded.mpe-syntax--source > .mpe-syntax--embedded.mpe-syntax--punctuation {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--js.mpe-syntax--embedded .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--js.mpe-syntax--jsx .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
+  color: #268bd2;
+}
+.mpe-syntax--gfm .mpe-syntax--link .mpe-syntax--entity {
+  color: #6c71c4;
+}
+.mpe-syntax--gfm .mpe-syntax--list.mpe-syntax--ordered {
+  color: #859900;
+}
+.mpe-syntax--gfm .mpe-syntax--list.mpe-syntax--unordered {
+  color: #b58900;
+}
+.mpe-syntax--gfm .mpe-syntax--raw {
+  font-style: italic;
+}
+.mpe-syntax--gfm.mpe-syntax--support {
+  color: #586e75;
+}
+.mpe-syntax--gfm.mpe-syntax--support.mpe-syntax--quote {
+  color: #6c71c4;
+}
+.mpe-syntax--markup.mpe-syntax--bold {
+  font-weight: bold;
+}
+.mpe-syntax--markup.mpe-syntax--italic {
+  font-style: italic;
+}
+.mpe-syntax--markup.mpe-syntax--heading {
+  color: #268bd2;
+}
+.mpe-syntax--markup.mpe-syntax--link {
+  color: #2aa198;
+}
+.mpe-syntax--markup.mpe-syntax--deleted {
+  color: #dc322f;
+}
+.mpe-syntax--markup.mpe-syntax--changed {
+  color: #b58900;
+}
+.mpe-syntax--markup.mpe-syntax--inserted {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--class {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--function {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--storage.mpe-syntax--modifier {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--entity.mpe-syntax--other {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--variable {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
+  color: #586e75;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--support.mpe-syntax--function.mpe-syntax--construct {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--support.mpe-syntax--function.mpe-syntax--array {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--class {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--assignment {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--other {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--entity {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--entity.mpe-syntax--name {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--entity.mpe-syntax--other {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--function {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--function.mpe-syntax--magic {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--punctuation.mpe-syntax--string {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--quantifier {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--logical {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--import {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--other {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--constant.mpe-syntax--language {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--constant.mpe-syntax--character {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--constant.mpe-syntax--other {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--variable {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--support.mpe-syntax--function.mpe-syntax--builtin {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--support.mpe-syntax--type.mpe-syntax--exception.mpe-syntax--python {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--support.mpe-syntax--type.mpe-syntax--python {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--string {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--class {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--class.mpe-syntax--todo {
+  color: #d33682;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--storage.mpe-syntax--type.mpe-syntax--function {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--function.mpe-syntax--begin {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--python .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--parameters {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--meta.mpe-syntax--embedded .mpe-syntax--punctuation.mpe-syntax--section {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
+  color: #586e75;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--entity.mpe-syntax--inherited-class {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--parameter {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--constant {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--constant.mpe-syntax--boolean {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--instance .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--class {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--class.mpe-syntax--control {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--module {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--require .mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
+  color: #cb4b16;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--keyword.mpe-syntax--other {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--keyword.mpe-syntax--control {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--keyword.mpe-syntax--operator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--special-method {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--symbol {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--symbol .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--hashkey {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--hashkey .mpe-syntax--punctuation.mpe-syntax--definition {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--regexp {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--todo {
+  color: #d33682;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--ruby.mpe-syntax--global {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--ruby.mpe-syntax--global .mpe-syntax--punctuation {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--block {
+  color: #268bd2;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--self {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--separator {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--numeric {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--regexp {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated {
+  color: #2aa198;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated .mpe-syntax--embedded.mpe-syntax--line.mpe-syntax--ruby .mpe-syntax--punctuation .mpe-syntax--source.mpe-syntax--ruby {
+  color: #dc322f;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated .mpe-syntax--embedded.mpe-syntax--line.mpe-syntax--ruby .mpe-syntax--source.mpe-syntax--ruby {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated .mpe-syntax--embedded.mpe-syntax--line.mpe-syntax--ruby .mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--array,
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--string.mpe-syntax--interpolated .mpe-syntax--embedded.mpe-syntax--line.mpe-syntax--ruby .mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--function {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--support.mpe-syntax--function {
+  color: #839496;
+}
+.mpe-syntax--source.mpe-syntax--ruby .mpe-syntax--support.mpe-syntax--function.mpe-syntax--kernel {
+  color: #859900;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--variable {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--declaration {
+  color: #93a1a1;
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--comparison {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--class,
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--type {
+  color: #b58900;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--val {
+  font-weight: normal;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--variable {
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--variable.mpe-syntax--parameter {
+  color: #6c71c4;
+  font-weight: normal;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--control.mpe-syntax--flow {
+  color: #93a1a1;
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--constant.mpe-syntax--language {
+  color: #93a1a1;
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--function.mpe-syntax--declaration {
+  color: #6c71c4;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--modifier.mpe-syntax--other {
+  font-weight: bold;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--package {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--variable.mpe-syntax--import {
+  font-weight: normal;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--type .mpe-syntax--bounds,
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--type .mpe-syntax--class {
+  color: #6c71c4;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--documentation :not(.mpe-syntax--embedded).mpe-syntax--link.mpe-syntax--entity {
+  color: #268bd2;
+  text-decoration: underline;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--documentation :not(.mpe-syntax--embedded) .mpe-syntax--class,
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--documentation :not(.mpe-syntax--embedded) .mpe-syntax--parameter {
+  color: #93a1a1;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--documentation :not(.mpe-syntax--embedded) .mpe-syntax--description {
+  color: #586e75;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--embedded {
+  color: #6c7c7c;
+  font-style: italic;
+}
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--embedded .mpe-syntax--margin,
+.mpe-syntax--source.mpe-syntax--scala .mpe-syntax--embedded .mpe-syntax--delimiters {
+  font-style: normal;
+}
+.scrollbar-style::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar-style::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.scrollbar-style::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0.66);
+  border: 4px solid rgba(150, 150, 150, 0.66);
+  background-clip: content-box;
+}
+.markdown-preview-enhanced-container .mpe-toolbar {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  opacity: 0;
+  display: block;
+}
+.markdown-preview-enhanced-container .mpe-toolbar .back-to-top-btn,
+.markdown-preview-enhanced-container .mpe-toolbar .refresh-btn,
+.markdown-preview-enhanced-container .mpe-toolbar .sidebar-toc-btn {
+  float: right;
+  width: 32px;
+  margin-right: 4px;
+  opacity: 0.4;
+}
+.markdown-preview-enhanced-container .mpe-toolbar .back-to-top-btn:hover,
+.markdown-preview-enhanced-container .mpe-toolbar .refresh-btn:hover,
+.markdown-preview-enhanced-container .mpe-toolbar .sidebar-toc-btn:hover {
+  opacity: 1.0;
+}
+.markdown-preview-enhanced-container:hover .back-to-top-btn,
+.markdown-preview-enhanced-container:hover .refresh-btn,
+.markdown-preview-enhanced-container:hover .sidebar-toc-btn {
+  display: block;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 268px;
+  height: 100%;
+  padding: 32px 0 12px 0;
+  overflow: auto;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  box-shadow: -4px 0px 12px rgba(150, 150, 150, 0.33);
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc a {
+  color: #333;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc ul {
+  padding: 0 1.6em;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc li {
+  margin-bottom: 0.8em;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc ul {
+  list-style-type: none;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-toolbar {
+  right: 300px;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .markdown-preview-enhanced {
+  width: calc(100% - 268px);
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar {
+  width: 8px;
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar-track,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar-thumb,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0.66);
+  border: 4px solid rgba(150, 150, 150, 0.66);
+  background-clip: content-box;
+}
+.markdown-preview-enhanced {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  overflow: initial;
+  margin: 10px 13px 10px 13px;
+  padding: 2em;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[for="preview"] {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5,
+.markdown-preview-enhanced h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  color: #000000;
+}
+.markdown-preview-enhanced h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.markdown-preview-enhanced h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h6 {
+  font-size: 1.0em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5 {
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1em;
+}
+.markdown-preview-enhanced h6 {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2 {
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced strong {
+  color: #000000;
+}
+.markdown-preview-enhanced del {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a {
+  color: #08c;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a:hover {
+  color: #0050a3;
+  text-decoration: none;
+}
+.markdown-preview-enhanced img,
+.markdown-preview-enhanced svg {
+  max-width: 100%;
+}
+.markdown-preview-enhanced > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > ul,
+.markdown-preview-enhanced > ol {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol {
+  padding-left: 2em;
+}
+.markdown-preview-enhanced ul.no-list,
+.markdown-preview-enhanced ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-preview-enhanced ul ul,
+.markdown-preview-enhanced ul ol,
+.markdown-preview-enhanced ol ol,
+.markdown-preview-enhanced ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li.task-list-item {
+  list-style: none;
+}
+.markdown-preview-enhanced li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-preview-enhanced .task-list-item-checkbox:hover {
+  cursor: pointer;
+}
+.markdown-preview-enhanced blockquote {
+  margin: 16px 0;
+  font-size: inherit;
+  padding: 0 15px;
+  color: #5c5c5c;
+  border-left: 4px solid #d6d6d6;
+}
+.markdown-preview-enhanced blockquote > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced blockquote > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced hr {
+  height: 4px;
+  margin: 32px 0;
+  background-color: #d6d6d6;
+  border: 0 none;
+}
+.markdown-preview-enhanced table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-preview-enhanced table th {
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-preview-enhanced table td,
+.markdown-preview-enhanced table th {
+  border: 1px solid #d6d6d6;
+  padding: 6px 13px;
+}
+.markdown-preview-enhanced dl {
+  padding: 0;
+}
+.markdown-preview-enhanced dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview-enhanced dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: #000000;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+.markdown-preview-enhanced code::before,
+.markdown-preview-enhanced code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview-enhanced pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em !important;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced .highlight {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced .highlight pre,
+.markdown-preview-enhanced pre {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 16px;
+  overflow: auto;
+  font-size: 0.85em !important;
+  line-height: 1.45;
+  color: #839496;
+  background-color: #003b4a !important;
+  border: #d6d6d6;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-preview-enhanced pre {
+  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-all;
+}
+.markdown-preview-enhanced pre .section {
+  opacity: 1;
+}
+.markdown-preview-enhanced pre code,
+.markdown-preview-enhanced pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced pre code:before,
+.markdown-preview-enhanced pre tt:before,
+.markdown-preview-enhanced pre code:after,
+.markdown-preview-enhanced pre tt:after {
+  content: normal;
+}
+.markdown-preview-enhanced p,
+.markdown-preview-enhanced blockquote,
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol,
+.markdown-preview-enhanced dl,
+.markdown-preview-enhanced pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo {
+  counter-reset: lineNo;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo .line::before {
+  display: inline-block;
+  counter-increment: lineNo;
+  content: counter(lineNo);
+  text-align: right;
+  padding: 0;
+  margin-left: -1em;
+  margin-right: 1.5em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-100 .line::before {
+  width: 2em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-1000 .line::before {
+  width: 2.5em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-10000 .line::before {
+  width: 3em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-100000 .line::before {
+  width: 3.5em;
+}
+.markdown-preview-enhanced kbd {
+  color: #000000;
+  border: 1px solid #d6d6d6;
+  border-bottom: 2px solid #c7c7c7;
+  padding: 2px 4px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .pagebreak,
+.markdown-preview-enhanced .newpage {
+  page-break-before: always;
+}
+@media screen and (min-width: 914px) {
+  .markdown-preview-enhanced {
+    width: 980px;
+    margin: 10px auto;
+    background: #fff;
+  }
+}
+@media screen and (max-width: 400px) {
+  .markdown-preview-enhanced {
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+}
+@media print {
+  .markdown-preview-enhanced {
+    background-color: #fff;
+    /*table,*/
+  }
+  .markdown-preview-enhanced h1,
+  .markdown-preview-enhanced h2,
+  .markdown-preview-enhanced h3,
+  .markdown-preview-enhanced h4,
+  .markdown-preview-enhanced h5,
+  .markdown-preview-enhanced h6 {
+    color: #000000;
+    page-break-after: avoid;
+  }
+  .markdown-preview-enhanced blockquote {
+    color: #5c5c5c;
+  }
+  .markdown-preview-enhanced pre {
+    page-break-inside: avoid;
+  }
+  .markdown-preview-enhanced table {
+    display: table;
+  }
+  .markdown-preview-enhanced img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .markdown-preview-enhanced pre,
+  .markdown-preview-enhanced code {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk {
+  position: relative;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .output-div {
+  overflow-x: auto;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .output-div svg {
+  display: block;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk pre {
+  cursor: text;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-btn,
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-all-btn {
+  float: right;
+  margin-left: 4px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: #eee;
+  background-color: #528bff;
+  background-image: none;
+  border: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-btn:hover,
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-all-btn:hover {
+  background-color: #4b7fe8;
+  cursor: pointer;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk:hover .btn-group {
+  display: block;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.85em;
+  color: inherit;
+  padding: 2px 6px;
+  background-color: rgba(0, 0, 0, 0.04);
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk.running .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk.running .status {
+  display: block;
+}
+.markdown-preview-enhanced:not([for="preview"]) .code-chunk .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced:not([for="preview"]) .code-chunk .status {
+  display: none;
+}
+/*
+ * Reveal.js styles
+ */
+[data-presentation-preview-mode] {
+  background-color: #f4f4f4;
+}
+[data-presentation-preview-mode] .preview-slides {
+  width: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide {
+  position: relative;
+  background-color: #fff;
+  padding: 2em !important;
+  margin-bottom: 12px;
+  text-align: left !important;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 0px 16px 4px #eeeeee;
+  font-size: 24px;
+}
+[data-presentation-preview-mode] .preview-slides .slide h1,
+[data-presentation-preview-mode] .preview-slides .slide h2,
+[data-presentation-preview-mode] .preview-slides .slide h3,
+[data-presentation-preview-mode] .preview-slides .slide h4,
+[data-presentation-preview-mode] .preview-slides .slide h5,
+[data-presentation-preview-mode] .preview-slides .slide h6 {
+  margin-top: 0;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe,
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+  z-index: 1;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  z-index: 2;
+}
+[data-presentation-preview-mode] section {
+  display: block;
+  width: 100%;
+  transform-style: preserve-3d;
+  font-size: 100%;
+  font: inherit;
+}
+.markdown-preview-enhanced[data-presentation-mode] {
+  font-size: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] h1,
+.markdown-preview-enhanced[data-presentation-mode] h2,
+.markdown-preview-enhanced[data-presentation-mode] h3,
+.markdown-preview-enhanced[data-presentation-mode] h4,
+.markdown-preview-enhanced[data-presentation-mode] h5,
+.markdown-preview-enhanced[data-presentation-mode] h6 {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] strong {
+  font-weight: bold;
+}
+.markdown-preview-enhanced[data-presentation-mode]::-webkit-scrollbar {
+  display: none;
+}
+.markdown-preview-enhanced .slides {
+  text-align: left !important;
+}
+
+    /*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+atom-text-editor {
+  color: white;
+  background-color: #172626;
+}
+/*
+ * markdown-preview-enhanced custom style
+ */
+.markdown-preview-enhanced.markdown-preview-enhanced {
+  font-family: "ShinGoPro-Light", sans-serif;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h1 {
+  counter-reset: h2counter;
+  color: #FF6860;
+  position: relative;
+  padding: 0.3em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h1::after {
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  content: '';
+  height: 5px;
+  background: repeating-linear-gradient(-45deg, #FF6860, #FF6860 3px, #FFF 3px, #FFF 6px);
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h2 {
+  background-color: #F5F5F5;
+  border-left: 5px solid #16A6B6;
+  padding: 0.4em;
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+  color: #555;
+  margin-top: 1.5em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h3 {
+  counter-increment: h3counter;
+  counter-reset: h4counter;
+  position: relative;
+  padding: .75em 1em .75em 1em;
+  color: #16A6B6;
+  font-size: 20px;
+  margin-top: 1.4em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h3::after {
+  position: absolute;
+  top: .5em;
+  left: .0em;
+  content: '';
+  width: 6px;
+  height: -webkit-calc(64%);
+  height: calc(64%);
+  background-color: #16A6B6;
+  border-radius: 4px;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h4 {
+  counter-increment: h4counter;
+  font-size: 16px;
+  border: 3px solid #ccc;
+  margin-top: 1em;
+  color: #555;
+  padding: .25em 0em .25em 1em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h2:before {
+  content: counter(h2counter) ". ";
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h3:before {
+  content: counter(h2counter) ". " counter(h3counter) ". ";
+}
+.markdown-preview-enhanced.markdown-preview-enhanced h4:before {
+  content: counter(h2counter) ". " counter(h3counter) ". " counter(h4counter) ". ";
+}
+.markdown-preview-enhanced.markdown-preview-enhanced img {
+  width: 40%;
+  margin: 0px 0px 30px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border: 2px solid #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 4px 4px 4px #111;
+  box-shadow: 4px 4px 4px #111;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced em {
+  color: #FF6860;
+  font-weight: bold;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced p {
+  line-height: 1.8em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced ol > li {
+  margin-top: 1em;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced strong {
+  color: #FF6860;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced hr {
+  color: #FFF;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h2:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h2:before {
+  content: "" !important;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h3:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h3:before {
+  content: "" !important;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h4:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h4:before {
+  content: "" !important;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h5:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h5:before {
+  content: "" !important;
+}
+.markdown-preview-enhanced.markdown-preview-enhanced[data-presentation-mode] h6:before,
+.markdown-preview-enhanced.markdown-preview-enhanced .preview-slides .slide h6:before {
+  content: "" !important;
+}
+
+    </style>
+
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({"extensions":["tex2jax.js"],"jax":["input/TeX","output/HTML-CSS"],"messageStyle":"none","tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]],"processEnvironments":false,"processEscapes":true},"TeX":{"extensions":["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]},"HTML-CSS":{"availableFonts":["TeX"]}}); </script> <script type="text/javascript" async src="file:///Users/yonekurayuuki/.atom/packages/markdown-preview-enhanced/dependencies/mathjax/MathJax.js"></script>
+
+    
+  </head>
+  <body class="markdown-preview-enhanced   "  >
+
+  <h1 id="&#x672C;&#x65E5;&#x306E;&#x8B70;&#x984C;">本日の議題</h1>
+<h2 id="&#x30A8;&#x30F3;&#x30B8;&#x30CB;&#x30A2;&#x30EA;&#x30F3;&#x30B0;&#x306E;&#x5FC5;&#x8981;&#x6027;">エンジニアリングの必要性</h2>
+<p>なぜドキュメント制作において、エンジニアリングを必要とするか？</p>
+<ol style="list-style-type: decimal">
+<li>業界全体の縮小傾向による競争の激化<br>
+<strong>⇨ 他社にない付加価値を持って生き残る。</strong></li>
+<li>機械翻訳流入による予想される翻訳市場の圧迫<br>
+<strong>⇨ 人の手による翻訳からの脱却が不可避。</strong></li>
+<li>コストの圧縮により、品質重視から効率性重視に変化している<br>
+<strong>⇨ ドキュメント制作コストの圧縮から、CMSや効率的なフロー提案などが求められる。</strong></li>
+</ol>
+<h2 id="&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306E;&#x58F0;&#x3092;&#x805E;&#x3044;&#x3066;&#x308F;&#x304B;&#x3063;&#x305F;&#x3053;&#x3068;">クライアントの声を聞いてわかったこと</h2>
+<ul>
+<li>対エンドユーザー向けだけでなく、<strong>社内文書などの管理も効率化</strong>したい<br>
+</li>
+<li>CMS導入には興味はあるが、ヒト的、モノ的な<strong>イニシャルコストをできるだけ小さく</strong>したい</li>
+<li>社内文書は、基本的に<strong>Officeをインタフェース</strong>として使いたい。</li>
+<li>ドキュメントのフローや作りを変更する場合は、<strong>ROIによるメリットを可視化</strong>したい。</li>
+</ul>
+<h2 id="&#x30A8;&#x30F3;&#x30B8;&#x30CB;&#x30A2;&#x30C1;&#x30FC;&#x30E0;&#x306E;&#x958B;&#x767A;&#x8A08;&#x753B;&#x6848;">エンジニアチームの開発計画案</h2>
+<p>主に下記の案がある。実現性含めて検討したい。</p>
+<ol style="list-style-type: decimal">
+<li>Officeプラグイン<br>
+<code>例：Word拡張プラグイン</code></li>
+<li>プリエディット評価ツール<br>
+<code>例：機械翻訳エンジンコンサルの営業ツール</code></li>
+<li>軽量マークアップ言語 + その他管理ツール/変換ツール等<br>
+<code>例：Markdown + Github</code></li>
+<li>Confluenceプラグイン開発<br>
+<code>例：WikiWorks/スモールスタート</code></li>
+<li>機械翻訳エンジン<br>
+<code>例：Tensorflowを使った企業用独自翻訳エンジン</code></li>
+<li>データ可視化<br>
+<code>例：ElasticSearch/Kibana/Fluentd</code></li>
+</ol>
+<h2 id="&#x8AB2;&#x984C;">課題</h2>
+<ul>
+<li>人手の不足。コードをかける人材が少ない。外部リソースも皆無。</li>
+<li>投資回収まで時間のかかる案は避けたい。</li>
+<li>既存客への売り込みを優先したい。</li>
+<li>労働集約型を脱却したい。（※「仕組導入後、制作を請け負わせてください」では今までと同じ。キャパ的に早晩限界が来る）</li>
+<li>知識集約型のモデルを築きたい（※ドキュメント制作効率化のための知見をサービス化したい）</li>
+<li>ターゲットとして今まで主にマニュアル制作に主眼においていたが、社内文書や開発ドキュメントの管理・運用の指南という意味では、売り先は自由？　ただし、前提として売り先のペルソナはを固定する必要がある？</li>
+</ul>
+<h2 id="appendix">Appendix</h2>
+<h3 id="dita&#x3068;&#x7C21;&#x6613;&#x30DE;&#x30FC;&#x30AF;&#x30A2;&#x30C3;&#x30D7;&#x8A00;&#x8A9E;&#x306E;&#x8A8D;&#x77E5;&#x5EA6;&#x306B;&#x3064;&#x3044;&#x3066;">DITAと簡易マークアップ言語の認知度について</h3>
+<p><a href="https://gyazo.com/5ed37fcde94427bd563b0fbd43e62cc7"><img src="https://i.gyazo.com/5ed37fcde94427bd563b0fbd43e62cc7.png" alt="https://gyazo.com/5ed37fcde94427bd563b0fbd43e62cc7"></a></p>
+<h3 id="markdownreviewgithub&#x3092;&#x4F7F;&#x3063;&#x3066;&#x306E;&#x51FA;&#x7248;&#x4F8B;">Markdown+Re:view+Githubを使っての出版例</h3>
+<p><a href="https://gyazo.com/cf00febd7db299d03870b08d3aa4b09f"><img src="https://i.gyazo.com/cf00febd7db299d03870b08d3aa4b09f.png" alt="https://gyazo.com/cf00febd7db299d03870b08d3aa4b09f"></a></p>
+<h3 id="kibana&#x3092;&#x4F7F;&#x3063;&#x305F;&#x30ED;&#x30B0;&#x89E3;&#x6790;&#x30D3;&#x30B8;&#x30E5;&#x30A2;&#x30E9;&#x30A4;&#x30BA;">Kibanaを使ったログ解析＋ビジュアライズ</h3>
+<p><a href="https://gyazo.com/38aad25e10536f127073f7c0db955d9c"><img src="https://i.gyazo.com/38aad25e10536f127073f7c0db955d9c.png" alt="https://gyazo.com/38aad25e10536f127073f7c0db955d9c"></a></p>
+
+
+  </body>
+  
+</html>
